@@ -7,15 +7,31 @@ body {
     margin: 0;
 }
 
-/* header-section style part */
-/* .main-section-bar {
+/*--------- this comment create the problem ----------*/
+/* main-section-bar {
+    display: flex;
+    justify-content: center;
+} */
+/* header {
     display: flex;
     justify-content: center;
 } */
 
+
+
+
+
+/* header-section style part  .*/
 .container {
 
+    /* display: flex;
+    justify-content: center; */
+
     margin: 50px 140px;
+
+    /* width: 100%; */
+    /* width: 1321px; */
+    /*----- jehetu margin or padding nilei ekta contain proper width nae,tahole ar width dite hbe na---- */
 
 }
 
@@ -24,12 +40,15 @@ body {
     /* align-items: center; */
     border-radius: 30px;
     background-color: #161616;
+    overflow: hidden;
 }
 
 
 .banner-title {
     color: aliceblue;
-    /* Width: 531px; */
+    /* Width: 531px; width lagbe na bcz flex-basis 50% */
+
+
     /* margin-left: 106px;
     margin-top: 111px;
     margin-right: 24px;
@@ -48,15 +67,32 @@ body {
 
 .banner-title p {
     padding-bottom: 30px;
+    text-align: left;
 }
 
 .banner-title a {
     text-decoration: none;
     color: white;
-    background-color: red;
-    padding: 10px;
-    border-radius: 5px;
+    font-weight: 400;
+    font-size: 25px;
+
 }
+
+.button {
+    background-color: red;
+    width: 220px;
+    height: 50px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fa-arrow-right {
+    margin-left: 10px;
+}
+
+
 
 /* .banner-image {
     width: 100%;
@@ -65,6 +101,7 @@ body {
     align-items: flex-end;
 
 } */
+
 .banner-title,
 .banner-image {
     flex-basis: 50%;
@@ -80,8 +117,17 @@ body {
     Width: 100%;
     /* Height: 613px; */
     margin-top: 100px;
-    =
+    margin-right: 20px;
+    transition: transform 1s;
+
 }
+
+
+
+.banner-image img:hover {
+    transform: scale(1.1);
+}
+
 
 /* Main-secction part styles*/
 
@@ -95,15 +141,17 @@ body {
     border-radius: 10px;
     background-color: black;
     margin-right: 24px;
-    min-width: 312px;
-    height: 312px;
+    width: 260px;
+    height: 275px;
+
 }
+
 
 .upcoming-match,
 .all-group,
 .blog {
-    Width: 252px;
-    Height: 64px;
+    Width: 200px;
+    Height: 52px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -113,9 +161,11 @@ body {
     border-radius: 10px;
 }
 
-.blog {
-    background-color: red;
+.blog a,
+.upcoming-match a {
+    text-decoration: none;
 }
+
 
 /* transfer-live card style */
 
@@ -126,18 +176,20 @@ body {
 }
 
 .transfer-news {
-    border: 1px solid gray;
+    border: 1px solid rgb(173, 173, 173);
     border-radius: 10px;
-    height: 362px;
+    /* height: 362px; */
 }
 
 .transfer-news img {
     width: 100%;
+    /*problem create here */
     /* height: 175px; */
 }
 
 .transfer-title {
     margin: 20px;
+    margin-bottom: 15px;
 }
 
 .transfer-title a {
@@ -163,9 +215,12 @@ body {
 
 
 .transfer-title p {
-    text-align: justify;
+
     margin-top: 15px;
-    margin-bottom: 20px;
+    margin-bottom: 18px;
+    font-size: 12px;
+    font-weight: 600;
+    text-align: justify;
 }
 
 .icon-details {
@@ -180,6 +235,7 @@ body {
 
 .icon-details span {
     color: #726e6e;
+    font-size: 13px;
 }
 
 /* .main-section {
@@ -190,14 +246,60 @@ body {
 
 } */
 
+/* .upcoming-match page style */
+
+.flags {
+
+    padding: 40px 20px 5px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.flags img {
+    width: 35%;
+    height: 35%;
+}
+
+.flags span {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.match {
+
+    border: 1px solid #E8E8E8;
+    border-radius: 5px;
+
+}
+
+
+.match h3 {
+    font-size: 17px;
+}
+
+.match p {
+    font-size: 14px;
+    margin-top: -10px;
+    margin-bottom: 40px;
+}
+
+.match h3,
+p {
+    text-align: center;
+}
+
+#view-all {
+    display: none;
+}
+
+
 /* footer style */
 .footer-part {
     background-color: #161616;
-    width: 100%;
     color: #FFFFFF;
     height: 444px;
     display: flex;
-    align-items: center;
     justify-content: center;
     flex-direction: column;
 
@@ -206,10 +308,10 @@ body {
 .footer-part h2 {
     font-weight: 600;
     font-size: 40px;
+    text-align: center;
 }
 
-hr {
-    width: 1320px;
+hr.container {
     border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
@@ -218,4 +320,285 @@ hr {
     justify-content: center;
     color: #B9B9B9;
     column-gap: 40px;
+}
+
+.social-media {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.social-media .fa-brands {
+    margin: 0 10px;
+    font-size: 30px;
+}
+
+/* responsive for device */
+/* For Mobile device */
+@media screen and (min-width: 576px) and (max-width:767px) {
+
+    .container {
+        margin: 44px 30px 20px 30px;
+    }
+
+    .header-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .banner-title {
+        margin: 35px 50px 35px 50px;
+        padding: 0px;
+    }
+
+    .banner-title h1 {
+
+        font-weight: 700;
+        font-size: 40px;
+        line: 40px;
+        text-align: center;
+        margin: 28px 50px 28px 50px;
+
+    }
+
+    .banner-title p {
+        padding-bottom: 0px;
+        text-align: center;
+        margin: 0px 0px 28px 0px;
+    }
+
+
+
+    .banner-title a {
+        font-weight: 400;
+        font-size: 25px;
+        text-decoration: none;
+        color: white;
+    }
+
+    .button {
+        margin: 0px 30%;
+    }
+
+    .banner-image img {
+        margin-top: 0px;
+        margin-right: 0px;
+    }
+
+    .main-section {
+        display: flex;
+
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .sidebar {
+        border-radius: 0px;
+        background-color: white;
+        margin-right: 0px;
+        width: 100%;
+        height: 250px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 4px;
+        margin-bottom: 24px;
+
+    }
+
+
+    .upcoming-match,
+    .all-group,
+    .blog {
+
+        background-color: white;
+        border: 1px solid #726e6e48;
+        font-size: 20px;
+        margin: 10px;
+        border-radius: 10px;
+    }
+
+    .upcoming-match {
+        width: 300px;
+        height: 50px;
+    }
+
+    .all-group {
+        width: 220px;
+        height: 50px;
+    }
+
+    .blog {
+        width: 220px;
+        height: 50px;
+    }
+
+    .transfer-live {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        column-gap: 24px;
+        width: 100%;
+
+    }
+
+
+
+    .transfer-news {
+        border-radius: 20px;
+
+    }
+
+    .transfer-title p {
+        font-size: 16px;
+    }
+
+    .icon-details span {
+
+        font-size: 18px;
+    }
+
+
+    .footer-part {
+        height: 100%;
+    }
+
+    .footer-details {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        color: #B9B9B9;
+        column-gap: 40px;
+    }
+
+    .social-media {
+        display: none;
+    }
+}
+
+/* For Mobile device */
+@media screen and (min-width: 768px) and (max-width:992px) {
+
+    .container {
+        margin: 50px;
+    }
+
+
+    .banner-title {
+
+        padding: 61px 2px 61px 76px;
+
+    }
+
+    .banner-title h1 {
+        font-weight: 700;
+        font-size: 40px;
+        margin-bottom: 10px;
+        line-height: 50px;
+    }
+
+    .banner-title p {
+        padding-bottom: 20px;
+        font-size: 14px;
+    }
+
+    .banner-image img {
+        Width: 100%;
+    }
+
+    .main-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .sidebar {
+        border-radius: 0px;
+        background-color: white;
+        margin-right: 0px;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 16px;
+        margin-bottom: 30px;
+
+    }
+
+    .upcoming-match,
+    .all-group,
+    .blog {
+
+        background-color: white;
+        border: 1px solid #726e6e41;
+        font-size: 20px;
+        margin: 10px;
+        border-radius: 10px;
+        Width: 230px;
+        Height: 64px;
+    }
+
+    .upcoming-match {
+        margin-left: 0px;
+    }
+
+    .blog {
+        margin-right: 0px;
+    }
+
+    .transfer-live {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 24px;
+        width: 100%;
+    }
+
+    #hide-live {
+        display: none;
+    }
+
+
+
+    .transfer-news {
+        border-radius: 20px;
+
+    }
+
+    .transfer-title p {
+        font-size: 16px;
+    }
+
+    .icon-details span {
+
+        font-size: 18px;
+    }
+
+    #view-all {
+        display: flex;
+        justify-content: center;
+    }
+
+    #view-all a {
+        text-decoration: none;
+        color: #FFFFFF;
+        background-color: red;
+        padding: 10px 30px;
+        border-radius: 5px;
+        margin-top: 30px;
+    }
+
+
+    .footer-part {
+        height: 100%;
+    }
+
+    .footer-details {
+
+        margin: 30px 103px 55px 96px;
+        flex-wrap: wrap;
+
+    }
+
+    .social-media {
+        display: none;
+    }
 }

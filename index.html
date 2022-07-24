@@ -19,7 +19,7 @@
                 <h1>The Greatest show on the earth</h1>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique necessitatibus, ducimus nulla
                     labore est officia.</p>
-                <a href="">Watch Live</a>
+                <div class="button"><a href="">Watch Live<i class="fa-solid fa-arrow-right"></i></a></div>
             </div>
             <div class="banner-image">
                 <img src="images/Banner Image.png" alt="">
@@ -31,9 +31,9 @@
         <section>
             <div class="main-section">
                 <div class="sidebar">
-                    <p class="upcoming-match">upcoming match</p>
-                    <p class="all-group">all-group</p>
-                    <p class="blog">Blog</p>
+                    <p class="upcoming-match"><a href="upcomingmatch.html" style="color:black">Upcoming Match</a></p>
+                    <p class="all-group">All-Group</p>
+                    <p class="blog" style="background-color:red;color:white">Blog</p>
                 </div>
                 <div class="transfer-live">
                     <!-- Nine column of transfer card -->
@@ -125,7 +125,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="transfer-news">
+                    <div id="hide-live" class="transfer-news">
                         <img src="images/Blog Image.png" alt="">
                         <div class="transfer-title">
                             <div class="transfer-button"><a href="">Transfer</a></div>
@@ -133,16 +133,20 @@
                             <div class="icon-details">
                                 <span><i class="fa-regular fa-clock icon"></i>10h</span>
                                 <span><i class="fa-regular fa-comment-dots icon"></i>23</span>
+
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+            <div id="view-all">
+                <a href="">View All</a>
+            </div>
         </section>
     </main>
     <footer class="footer-part">
         <h2>Goal</h2>
-        <hr>
+        <hr class="container">
         <div class="footer-details">
             <p>Contact Us</p>
             <p>Terms of Service</p>
@@ -151,6 +155,13 @@
             <p>Goal App</p>
             <p>Goal Live</p>
 
+        </div>
+
+        <div class="social-media">
+            <i class="fa-brands fa-facebook-square"></i>
+            <i class="fa-brands fa-instagram-square"></i>
+            <i class="fa-brands fa-twitter-square"></i>
+            <i class="fa-brands fa-pinterest-square"></i>
         </div>
     </footer>
 </body>
